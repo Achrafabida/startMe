@@ -17,7 +17,7 @@ export class FormComponent implements OnChanges {
   /* Step Form */
   active = 1;
 
-
+isLinear = false;
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
 

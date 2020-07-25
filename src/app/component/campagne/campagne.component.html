@@ -1,10 +1,8 @@
-<div class="card compagne" [routerLink]="['projet/']" >
+<div class="card compagne" [routerLink]="['projet/1']" >
   <img class="card-img-top" [src]="compagne.img" alt="Card image cap" style="height: 28vh; object-fit:cover">
   <div class="card-body">
     <p class="card-text line-1">{{ compagne.title }}</p>
     <b class="fs-10">{{ compagne.reached }}DT <span  > collecté sur </span> {{ compagne.goal }}DT</b>
     <ngb-progressbar type="success" [value]= "(compagne.reached/compagne.goal)*100" ><b>{{compagne.reached/compagne.goal * 100}}%</b></ngb-progressbar>
     <div class="creator float-right">Crée par <span>{{ compagne.creator }}</span></div>
- 
-  </div>
 </div>

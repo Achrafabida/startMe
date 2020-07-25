@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './component/nav-bar/nav-bar.component';
@@ -14,6 +14,9 @@ import { FormlyModule } from '@ngx-formly/core';
 import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
 import { LoginComponent } from './pages/login/login.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSliderModule } from '@angular/material/slider';
+import {MatStepperModule} from '@angular/material/stepper';
+import { NgxGalleryModule } from 'ngx-gallery-9';
 
 
 @NgModule({
@@ -26,6 +29,8 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     FormComponent,
     ComagneDetailsComponent,
     LoginComponent,
+
+    
   ],
   imports: [
     BrowserModule,
@@ -34,9 +39,10 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     ReactiveFormsModule,
     FormlyModule.forRoot(),
     FormlyBootstrapModule,
-    NoopAnimationsModule
+    NoopAnimationsModule,MatStepperModule,NgxGalleryModule
   ],
   providers: [],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
