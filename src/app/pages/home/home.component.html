@@ -1,0 +1,16 @@
+
+<app-nav-bar></app-nav-bar>
+<app-image-slider [images]="images"></app-image-slider>
+
+<div>
+  <!-- Compayne  -->
+  <div class="container">
+    <div class="row col-md-12">
+      <div *ngFor="let item of compagnes" class="col-lg-4 col-md-6 col mt-4">
+        <app-campagne [compagne]="item"></app-campagne>
+      </div>
+    </div>
+  </div>
+
+</div>
+<app-form></app-form>

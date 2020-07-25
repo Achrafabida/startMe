@@ -1,0 +1,10 @@
+<div class="card compagne" [routerLink]="['/routePath']" >
+  <img class="card-img-top" [src]="compagne.img" alt="Card image cap">
+  <div class="card-body">
+    <p class="card-text">{{ compagne.title }}</p>
+    <ngb-progressbar type="success" [value]="50"><b class="fs-10">{{ compagne.reached }}DT <span
+          class="font-weight-light">collecté sur </span> {{ compagne.goal }}DT</b></ngb-progressbar>
+    <div class="creator float-right">Crée par <span>{{ compagne.creator }}</span></div>
+
+  </div>
+</div>
