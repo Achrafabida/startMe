@@ -1,11 +1,16 @@
 import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {STEPPER_GLOBAL_OPTIONS} from '@angular/cdk/stepper';
+//import {STEPPER_GLOBAL_OPTIONS} from '@angular/cdk/stepper';
 
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
-  styleUrls: ['./form.component.scss']
+  styleUrls: ['./form.component.scss'],
+  providers: [{
+    provide: STEPPER_GLOBAL_OPTIONS, useValue: {showError: true}
+  }]
 })
 export class FormComponent implements OnChanges {
 
@@ -16,20 +21,20 @@ export class FormComponent implements OnChanges {
   firstFormGroup: FormGroup;
   secondFormGroup: FormGroup;
 
-
   /* Modal */
   closeResult = '';
 
   constructor(private modalService: NgbModal,private _formBuilder: FormBuilder) {}
     ngOnChanges(changes: SimpleChanges): void {
-    }
-    ngOnInit() {
       this.firstFormGroup = this._formBuilder.group({
         firstCtrl: ['', Validators.required]
       });
       this.secondFormGroup = this._formBuilder.group({
         secondCtrl: ['', Validators.required]
       });
+    }
+    ngOnInit() {
+      
     }
   open(content) {
     this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {

@@ -12,6 +12,8 @@ import { ComagneDetailsComponent } from './pages/comagne-details/comagne-details
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormlyModule } from '@ngx-formly/core';
 import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
+import { LoginComponent } from './pages/login/login.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -23,6 +25,7 @@ import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
     ImageSliderComponent,
     FormComponent,
     ComagneDetailsComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,7 +33,8 @@ import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
     NgbModule,
     ReactiveFormsModule,
     FormlyModule.forRoot(),
-    FormlyBootstrapModule
+    FormlyBootstrapModule,
+    NoopAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

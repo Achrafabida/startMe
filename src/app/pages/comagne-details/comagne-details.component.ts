@@ -8,8 +8,11 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ComagneDetailsComponent implements OnInit {
 
   constructor() { }
+  
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
+
+
 
 }

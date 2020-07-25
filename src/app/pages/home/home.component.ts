@@ -6,9 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  images = [{ title: 'No mouse events...', details: 'This carousel doesn\'t pause or resume on mouse events', src: 'assets/img/slider/img1.jpg' },
-  { title: '10 seconds between slides...', details: 'This carousel uses customized default values.', src: 'assets/img/slider/img2.jpg' },
-  { title: 'test', details: 'test eeee', src: 'assets/img/slider/img3.jpg' },]
+  images = [{ title: 'Missions et Projects', details: 'Plan, Permis de construire, Modélisation, 3D, BIM etc...  Vous êtes à la recherche d\'un prestataire ?',objectif:  'Publiez  votre annonce.', src: 'assets/img/slider/img1.jpg' },
+  { title: 'Nos Prestataires', details: 'Architecte, Dessinateur, Designer, Ingénieur, Projeteur, etc. Vous avez besoins d\'un service ou besoins .',objectif:  'Trouvez gratuitement un prestataire pour réaliser votre projet.', src: 'assets/img/slider/img2.jpg' },
+  { title: 'Actualités', details: 'Retrouvez tous nos articles et guides dédiés.  Pour les particuliers, les entreprises et les freelances !',objectif:  ' Construction, Industrie, Logiciel, Normes, Architecture ...', src: 'assets/img/slider/img3.jpg' },]
   constructor() { }
 
   ngOnInit(): void {
