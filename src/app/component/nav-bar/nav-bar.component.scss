@@ -1,3 +1,16 @@
 .button_menu:hover {
-    color: green !important;
+  color: green !important;
+}
+
+.user {
+  img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid green;
+    margin-right:10px ;
+  }
+  font-size: 16px;
+
 }

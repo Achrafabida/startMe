@@ -26,6 +26,7 @@ isLinear = false;
 
   /* Modal */
   closeResult = '';
+  pay: string;
 
   constructor(private modalService: NgbModal,private _formBuilder: FormBuilder) {}
     ngOnChanges(changes: SimpleChanges): void {
@@ -37,6 +38,7 @@ isLinear = false;
       });
     }
     ngOnInit() {
+      this.pay='';
       
     }
   open(content) {

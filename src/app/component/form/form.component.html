@@ -7,7 +7,7 @@
   </div>
   <div class="modal-body">
 
-    <mat-horizontal-stepper class="aaa" style="background-color: white;" #stepper>
+    <mat-horizontal-stepper class="aaa"  style="background-color: white;max-width: 460px;" #stepper>
       <mat-step [stepControl]="firstFormGroup">
         <div class="form-group">
           <label for="nameproject">Nom projet</label>
@@ -82,22 +82,115 @@
         <ng-template matStepLabel>Done</ng-template>
         <div>
           <div class="form-group">
-            <label for="nameproject">Main Image</label>
+            <label for="nameproject">Image principale</label>
             <input type="file" class="form-control-file" >
           </div>
           <div class="form-group">
-            <label for="nameproject">Autre Image et Video</label>
+            <label for="nameproject">Autre Images et Videos</label>
             <input type="file" class="form-control-file" multiple>
           </div>
 
         </div>
       </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Done</ng-template>
+        <div>
+          <label class="fs-14 font-weight-bold">Frais de création</label>
+          <div class="font-weight-bold float-right">
+            50 DT
+          </div>
+        </div>
+        <div class="payment">
+          <label for="">Methode de payment</label>
+          <div class="row">
+            <div class="col-md-6 "><button class="btn  w-100 btn-outline-success"
+                (click)="pay='carte'">Carte Bancaire</button></div>
+            <div class="col-md-6 "><button class="btn  w-100 btn-outline-success "
+                (click)="pay='virement'">Virement Bancaire</button></div>
+          </div>
+          <div>
+            <div class="row" *ngIf="pay == 'carte'">
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="nameproject" class="fs-10 font-weight-bold">N° Carte</label>
+                  <input type="text" class="form-control" id="nameproject" placeholder="4242 4242 4242 4242">
+                </div>
+              </div>
+             
+              <div class="col-4">
+                <div class="form-group">
+                  <label for="nameproject" class="fs-10 font-weight-bold">Date expiration</label>
+                  <input type="text" class="form-control" id="nameproject" placeholder="01/2021">
+    
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="form-group">
+                  <label for="nameproject" class="fs-10 font-weight-bold">CVV2</label>
+                  <input type="password"number maxlength="3" class="form-control" id="nameproject" placeholder="123">
+    
+                </div>
+              </div>
+            
+            </div>
+            <div class="row" *ngIf="pay == 'virement'">
+              <div class="col-3"></div>
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="nameproject" class="fs-10 font-weight-bold">N° RIB</label>
+                  <input type="text" value="035183598478831"class="form-control" id="nameproject" >
+                </div>
+              </div>
+              <div class="col-3"></div>
+             
+     
+            
+            </div>
+          </div>
+        </div>
+        <label class="fs-14 font-weight-bold mt-3">Services Supplémentaires</label>
+        <p class="fs-14">StartMe vous propose sa liste de services de ses partenaires.</p>  
+        <div class="row">
+          <div class="col-6">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+              <label class="form-check-label fs-12" for="defaultCheck1">
+                Livraison
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+              <label class="form-check-label fs-12" for="defaultCheck2">
+                Marketing
+              </label>
+            </div>
+          </div>
+          
+          <div class="col-6">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+              <label class="form-check-label fs-12" for="defaultCheck3">
+                Assurance
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="defaultCheck4">
+              <label class="form-check-label fs-12" for="defaultCheck4">
+                Bureau d'etude et consulting
+              </label>
+            </div>
+          </div>
+          <div class="text-primary fs-10 font-weight-bold mt-3 float-right">Les Services Supplémentaire seront facturés. </div>
+         
+
+        </div>
+        <div class="modal-footer mb-0 py-0 pt-3">
+          <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Valider</button>
+        </div>
+      </mat-step>
     </mat-horizontal-stepper>
   </div>
 
-  <div class="modal-footer">
-    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
-  </div>
+
 </ng-template>
-<a class="nav-link button_menu" (click)="open(content)" href="#"> Créer projet<span class="sr-only">(current)</span></a>
-<ng-selectize [options]="options" placeholder="placeholder" ngDefaultControl></ng-selectize>
+<a class="nav-link text-success  font-weight-bold" (click)="open(content)" href="#"><i class="fa fa-plus-circle"></i> Créer projet<span class="sr-only">(current)</span></a>

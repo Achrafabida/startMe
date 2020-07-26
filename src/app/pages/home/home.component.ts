@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  images = [{ title: 'Missions et Projects', details: 'Plan, Permis de construire, Modélisation, 3D, BIM etc...  Vous êtes à la recherche d\'un prestataire ?',objectif:  'Publiez  votre annonce.', src: 'assets/img/slider/img1.jpg' },
+  images = [{ title: 'Missions et Projets', details: 'Plan, Permis de construire, Modélisation, 3D, BIM etc...  Vous êtes à la recherche d\'un prestataire ?',objectif:  'Publiez  votre annonce.', src: 'assets/img/slider/img1.jpg' },
   { title: 'Nos Prestataires', details: 'Architecte, Dessinateur, Designer, Ingénieur, Projeteur, etc. Vous avez besoins d\'un service ou besoins .',objectif:  'Trouvez gratuitement un prestataire pour réaliser votre projet.', src: 'assets/img/slider/img2.jpg' },
   { title: 'Actualités', details: 'Retrouvez tous nos articles et guides dédiés.  Pour les particuliers, les entreprises et les freelances !',objectif:  ' Construction, Industrie, Logiciel, Normes, Architecture ...', src: 'assets/img/slider/img3.jpg' },]
   constructor() { }

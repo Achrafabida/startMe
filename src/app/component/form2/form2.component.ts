@@ -20,9 +20,11 @@ export class Form2Component implements OnInit {
  
    /* Modal */
    closeResult = '';
+  pay: string;
   constructor(private modalService: NgbModal,private _formBuilder: FormBuilder) { }
 
   ngOnInit(): void {
+    this.pay='';
   }
   formatLabel(value: number) {
     if (value >= 1000) {
@@ -38,7 +40,7 @@ export class Form2Component implements OnInit {
       this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
     });
   }
-
+ 
   private getDismissReason(reason: any): string {
     if (reason === ModalDismissReasons.ESC) {
       return 'by pressing ESC';
