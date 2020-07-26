@@ -17,6 +17,8 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule } from '@angular/material/slider';
 import {MatStepperModule} from '@angular/material/stepper';
 import { NgxGalleryModule } from 'ngx-gallery-9';
+import { Form2Component } from './component/form2/form2.component';
+
 
 
 @NgModule({
@@ -29,6 +31,7 @@ import { NgxGalleryModule } from 'ngx-gallery-9';
     FormComponent,
     ComagneDetailsComponent,
     LoginComponent,
+    Form2Component,
 
     
   ],
@@ -39,8 +42,7 @@ import { NgxGalleryModule } from 'ngx-gallery-9';
     ReactiveFormsModule,
     FormlyModule.forRoot(),
     FormlyBootstrapModule,
-    NoopAnimationsModule,MatStepperModule,NgxGalleryModule
-  ],
+    NoopAnimationsModule,MatStepperModule,NgxGalleryModule ],
   providers: [],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   bootstrap: [AppComponent]

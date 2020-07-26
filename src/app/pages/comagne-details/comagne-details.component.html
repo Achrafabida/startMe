@@ -1,13 +1,33 @@
 <app-nav-bar></app-nav-bar>
-<div class="row col-md-12">
-    <div class="col-md-5">
-        <div class="assets">
-                <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
-            </div>
-        </div>
-    
-    <div class="col-md-7">
-        <h2>Création des vélos éléctroniques</h2>
+<div class="row col-md-12 mt-4">
+  <div class="col-md-5">
+    <div class="assets">
+      <ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
     </div>
+  </div>
+
+  <div class="col-md-7">
+
+    <h2>Création des vélos éléctroniques <span class="badge badge-pill badge-light">DIY</span>
+    </h2>
+    <h5 class="font-weight-light">
+      Futuristic Frame | 12.9kg Ultra Light | Removable Seatpost Battery <br>
+      Riding e-bike is only a means of transportation?
+    </h5>
+    <div>
+      <span *ngFor="let item of tags" class="badge badge-pill badge-light font-weight-light mx-1">{{ item }}</span>
+    </div>
+    <ul class="list-group mt-3">
+      <li class="list-group-item  ">Besoin Total <span class="float-right"><span class="font-weight-bold">35M</span>/92M</span>
+        <ngb-progressbar type="success" value="40"><b>30%</b></ngb-progressbar>
+      </li>
+      <li class="list-group-item">Capital<span class="text-right to-hide">10M DT/30M DT</span><button class="btn-pay">Participer</button></li>
+      <li class="list-group-item">Terrain <span class="small text-success"> (12M DT)</span> <span class="text-right">0/1</span><button class="btn-pay">Participer</button></li>
+      <li class="list-group-item">Materieaux de transports<span class="small text-success"> (25M DT)</span> <span class="text-right">2/3</span><button class="btn-pay">Participer</button></li>
+      <li class="list-group-item">Application web <span class="small text-success"> (10M DT)</span> <span class="text-right">1/1</span><button class="btn-pay">Participer</button></li>
+      <li class="list-group-item">Marketing <span class="small text-success"> (5M DT)</span> <span class="text-right">50/2500</span><button class="btn-pay">Participer</button></li>
+    </ul>
+    <div class="creator mt-2 float-right">Crée par <span>Said Taktak</span></div>
+  </div>
 </div>
-<p>comagne-details works!</p>
+

@@ -6,30 +6,98 @@
     </button>
   </div>
   <div class="modal-body">
-    
-<mat-horizontal-stepper style= "background-color: white;" #stepper>
-  <mat-step [stepControl]="firstFormGroup">
-    aaaaaaaaaaa
-  </mat-step>
-  <mat-step [stepControl]="secondFormGroup">
-    aaaaaaaaa
-  </mat-step>
-  <mat-step>
-    <ng-template matStepLabel>Done</ng-template>
-    <p>You are now done.</p>
-    <div>
-      <button mat-button matStepperPrevious>Back</button>
-      <button mat-button (click)="stepper.reset()">Reset</button>
-    </div>
-  </mat-step>
-</mat-horizontal-stepper>
+
+    <mat-horizontal-stepper class="aaa" style="background-color: white;" #stepper>
+      <mat-step [stepControl]="firstFormGroup">
+        <div class="form-group">
+          <label for="nameproject">Nom projet</label>
+          <input type="text" class="form-control" id="nameproject" placeholder="Entrer nom du projet">
+        </div>
+        <div class="form-group">
+          <label for="descriptionProject">Description du projet</label>
+          <textarea type="text" class="form-control" id="descriptionProject" placeholder="Décrire le projet"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="nameproject">Catégorie</label>
+          <select class="browser-default custom-select">
+            <option selected>Choisir une catégorie du proje</option>
+            <option value="1">Agroalimentaire</option>
+            <option value="2">Bois/Papier/Carton/Imprimerie</option>
+            <option value="3">Chimie/Parachimie</option>
+            <option value="4">Edition/Communication/Multimédia</option>
+            <option value="5">Etude et conseils</option>
+            <option value="6">Informatique/Télécomms</option>
+            <option value="7">Métallurgie/Travail du métal</option>
+            <option value="8">Services aux entreprises</option>
+            <option value="8">Transport et logistique</option>
+          </select>
+
+        </div>
+
+        <div class="form-group">
+          <label>Tags</label>
+          <select multiple class="browser-default custom-select">
+            <option selected>Choisir une catégorie du proje</option>
+            <option value="1">Modern</option>
+            <option value="2">Innovation</option>
+            <option value="3">Tendance</option>
+            <option value="4">Tech</option>
+            <option value="5">Financial</option>
+            <option value="6">Specifique</option>
+          </select>
+        </div>
+
+      </mat-step>
+      <mat-step [stepControl]="secondFormGroup">
+        <div>
+          <div class="row" *ngFor="let item of besoins">
+            <div class="col-md-12">
+              <div class="form-group">
+                <label for="nameproject">Besoin</label>
+                <input type="text" class="form-control" id="nameproject" placeholder="Nom du Besoin">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="nameproject">Quantité</label>
+                <input type="text" class="form-control" id="nameproject" placeholder="Valeur du Besoin en DT">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="nameproject">Valeur</label>
+                <input type="text" class="form-control" id="nameproject" placeholder="Quantité nécessaire">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <button class="btn w-100 btn-primary" (click)="besoins.push(1)">+ Ajouter un besoin </button>
+
+          </div>
+        </div>
+
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Done</ng-template>
+        <div>
+          <div class="form-group">
+            <label for="nameproject">Main Image</label>
+            <input type="file" class="form-control-file" >
+          </div>
+          <div class="form-group">
+            <label for="nameproject">Autre Image et Video</label>
+            <input type="file" class="form-control-file" multiple>
+          </div>
+
+        </div>
+      </mat-step>
+    </mat-horizontal-stepper>
   </div>
+
   <div class="modal-footer">
     <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Save</button>
   </div>
 </ng-template>
-
-<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>
-
-
-
+<a class="nav-link button_menu" (click)="open(content)" href="#"> Créer projet<span class="sr-only">(current)</span></a>
+<ng-selectize [options]="options" placeholder="placeholder" ngDefaultControl></ng-selectize>

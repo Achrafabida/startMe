@@ -1,6 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
 /* Importing Bootstrap SCSS file. */
+$theme-colors: (
+  "primary": #0074d9,
+  "danger": #ff4136,
+  "light":#f0f0f0
+);
 @import '~bootstrap/scss/bootstrap';
 
 .fs-10{
@@ -15,3 +20,14 @@
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.creator{
+    font-size: 9px;
+
+    color: grey;
+    span{
+    font-size: 11px;
+
+        color: green;
+        font-weight: 600;
+    }
+}

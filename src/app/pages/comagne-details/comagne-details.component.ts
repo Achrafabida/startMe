@@ -10,13 +10,14 @@ export class ComagneDetailsComponent implements OnInit {
   galleryImages: NgxGalleryImage[];
   constructor() { }
   
+  tags=['Develpment','IT','Tech','GEEKLORDS']
 
   ngOnInit(): void {     
-
+     
     this.galleryOptions = [
       {
-        width: '600px',
-        height: '400px',
+        width: '100%',
+        height: '500px',
         thumbnailsColumns: 4
       }
     ];

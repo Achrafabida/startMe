@@ -13,7 +13,10 @@ import {STEPPER_GLOBAL_OPTIONS} from '@angular/cdk/stepper';
   }]
 })
 export class FormComponent implements OnChanges {
-
+  options=['555','4444']
+  besoins=[1]
+	placeholder = 'Placeholder...';
+	value: string[] = [];
   /* Step Form */
   active = 1;
 
@@ -53,5 +56,6 @@ isLinear = false;
       return `with: ${reason}`;
     }
   }
+  
 
 }
